@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div id="particles-js"></div>
+
     <nav class="nav">
         <div class="right">
             <ul class="nav-list">
@@ -16,8 +19,36 @@
             </ul>
         </div>
     </nav>
+    <div class="titlu">
+        <h1>Ana-Maria Ghiță</h1>
+        <h2>Portofolio</h2>
+    </div>
+
+    <script src="./particles.js"></script>
+
+    <script>
+       particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+    console.log('particles.js loaded');
+});
+    </script>
+
+    <script src="./gsap.min.js"></script>
     
-    <script src="main.js"></script>
-    <script src="gsap.min.js"></script>
+    <script>
+        gsap.from(".titlu h1", {
+    opacity: 0,
+    y: -50,
+    duration: 1,
+    delay: 0.5
+});
+
+gsap.from(".titlu h2", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    delay: 1
+});
+
+    </script>
 </body>
 </html>

@@ -1,21 +1,30 @@
-body {
-    background-color: #060D15;
-    box-sizing: border-box;
-}
 
 * {
     font-family: "Poppins", sans-serif;
     padding: 0;
     margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #16181aa6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 0 auto;
     width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
 }
 
 .nav-list {
@@ -28,4 +37,24 @@ body {
 
 li {
     display: list-item;
+    cursor: pointer;
 }
+
+.titlu{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 200px;
+    z-index: 2;
+    position: relative;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #211c1c; /* Set a background color */
+}
+
