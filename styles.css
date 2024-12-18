@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #16181aa6;
+    background-color: #060d15;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -32,13 +32,25 @@ body {
     display: flex;
     gap: 1.4rem;
     padding: 10px;
-    color: aliceblue
+    color: aliceblue;
+}
+
+.nav-item a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #e92c7c;
 }
 
 li {
     display: list-item;
     cursor: pointer;
 }
+
 
 .titlu{
     text-align: center;
@@ -55,6 +67,6 @@ li {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: #211c1c; /* Set a background color */
+    background-color: #060d15;
 }
 
