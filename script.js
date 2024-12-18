@@ -12,13 +12,12 @@ gsap.from(".titlu h2", {
     delay: 1
 });
 
-
 const titlu = document.getElementById("titlu");
 const initialPosition = { x: 0, y: 0 };
 
 document.addEventListener("mousemove", (e) => {
   const rect = titlu.getBoundingClientRect();
-  
+
   const centerX = rect.left + rect.width / 2;
   const centerY = rect.top + rect.height / 2;
 
@@ -27,18 +26,20 @@ document.addEventListener("mousemove", (e) => {
 
   const distance = Math.sqrt(distX * distX + distY * distY);
 
-  if (distance < 150) {
+  const radius =200;
+  if (distance < radius) {
+    const safeDistance = Math.max(distance, 1);
 
-    const offsetX = -distX / distance * 50;
-    const offsetY = -distY / distance * 50;
+    const offsetX = -distX / safeDistance * (radius - distance + 1);
+    const offsetY = -distY / safeDistance * (radius - distance + 1);
 
     gsap.to(titlu, {
       x: `+=${offsetX}`,
       y: `+=${offsetY}`,
-      duration: 2,
+      duration: 0.3,
+      ease: "power1.out",
     });
   } else {
-
     gsap.to(titlu, {
       x: initialPosition.x,
       y: initialPosition.y,
