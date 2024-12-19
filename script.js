@@ -55,20 +55,19 @@ gsap.utils.toArray('.scroll-img').forEach((img) => {
     gsap.fromTo(
         img,
         {
-            x: '100%',
+            scale: 0,
             opacity: 0,
         },
         {
-            x: '0%',
+            scale: 1,
             opacity: 1,
-            duration: 1,
-            ease: 'power1.out',
+            duration: 10,
+            ease: 'circle.out',
             scrollTrigger: {
                 trigger: img,
-                start: 'top 80%',
-                end: 'bottom 30%',
-                toggleActions: 'play none none reverse',
-                onLeaveBack: () => {}
+                start: 'top 75%',
+                end: 'top 50%',
+                scrub: true,
             },
         }
     );
