@@ -48,3 +48,30 @@ document.addEventListener("mousemove", (e) => {
     });
   }
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray('.scroll-img').forEach((img) => {
+    gsap.fromTo(
+        img,
+        {
+            x: '100%',
+            opacity: 0,
+        },
+        {
+            x: '0%',
+            opacity: 1,
+            duration: 1,
+            ease: 'power1.out',
+            scrollTrigger: {
+                trigger: img,
+                start: 'top 80%',
+                end: 'bottom 30%',
+                toggleActions: 'play none none reverse',
+                onLeaveBack: () => {}
+            },
+        }
+    );
+});
+
+
