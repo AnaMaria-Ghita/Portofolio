@@ -94,7 +94,6 @@ li {
 .img_container {
     display: grid;
     place-items: center;
-
     overflow: hidden;
     position: relative;
 }
@@ -105,4 +104,20 @@ li {
     max-width: 800px;
     max-height: 600px;
     z-index: 3;
+}
+
+.arrow{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.arrow-down{
+    position:relative;
+    margin-top: 200px;
+    width: auto;
+    height: 45px;
+    z-index: 3;
+    display: flex;
 }
