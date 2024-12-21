@@ -12,7 +12,7 @@ gsap.from(".titlu h2", {
     delay: 1
 });
 
-const titlu = document.getElementById("titlu");
+const titlu = document.getElementById("arrow-down");
 const initialPosition = { x: 0, y: 0 };
 
 document.addEventListener("mousemove", (e) => {
