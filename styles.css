@@ -239,3 +239,63 @@ li {
 .seeMore:hover {
     text-shadow: 0 0 100px #e92c7b, 0 0 20px #e92c7b, 0 0 30px #e92c7b, 0 0 40px #e92c7b, 0 0 50px #e92c7b, 0 0 60px #e92c7b, 0 0 70px #e92c7b;
 }
+
+/*about me*/
+.me{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.meImg{
+    transition: transform 0.5s ease;
+    object-fit: cover;
+    top: 0;
+}
+
+.photoBackground{
+    z-index: 2;
+    transform: translateX(0%);
+}
+
+.me-photo{
+    z-index: 3;
+    transform: translateX(100%);
+}
+
+.me-text{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 3;
+}
+
+.me-img{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    z-index: 3;
+}
+
+/*footer*/
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-text{
+    color: aliceblue;
+    font-size: 1rem;
+    z-index: 3;
+}

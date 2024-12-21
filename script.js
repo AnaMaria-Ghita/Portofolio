@@ -72,3 +72,29 @@ gsap.utils.toArray('.scroll-img').forEach((img) => {
         }
     );
 });
+
+/*me*/
+const leftImage = document.querySelector('.photoBackground');
+  const rightImage = document.querySelector('.me-photo');
+
+  function overlapAnimation() {
+    gsap.to(leftImage, {
+      x: '40%',
+      duration: 1.5,
+      ease: 'power3.inOut',
+    });
+
+    gsap.to(rightImage, {
+      x: '-60%',
+      duration: 1.5,
+      ease: 'power3.inOut',
+    });
+  }
+
+  gsap.to(window, {
+    scrollTrigger: {
+      trigger: leftImage,
+      start: 'top bottom',
+      onEnter: overlapAnimation,
+    }
+  });
