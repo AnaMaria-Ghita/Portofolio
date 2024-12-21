@@ -218,6 +218,7 @@ li {
 
 .more{
     margin-top: 50px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -241,6 +242,23 @@ li {
 }
 
 /*about me*/
+.me-title{
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    align-items: center;
+    background-color: #e92c7b3b;
+}
+
+.whoAmI{
+    z-index: 3;
+    color: aliceblue;
+    font-size: 2rem;
+    margin: 50px;
+}
+
 .me{
     display: flex;
     flex-direction: row-reverse;
