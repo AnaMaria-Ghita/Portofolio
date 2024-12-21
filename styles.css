@@ -224,6 +224,7 @@ li {
     align-items: center;
     user-select: none;
     -webkit-user-select: none;
+    overflow:visible;
 }
 
 .seeMore{
@@ -236,5 +237,5 @@ li {
 }
 
 .seeMore:hover {
-    text-shadow: 0 0 10px #e92c7b, 0 0 20px #e92c7b, 0 0 30px #e92c7b, 0 0 40px #e92c7b, 0 0 50px #e92c7b, 0 0 60px #e92c7b, 0 0 70px #e92c7b;
+    text-shadow: 0 0 100px #e92c7b, 0 0 20px #e92c7b, 0 0 30px #e92c7b, 0 0 40px #e92c7b, 0 0 50px #e92c7b, 0 0 60px #e92c7b, 0 0 70px #e92c7b;
 }

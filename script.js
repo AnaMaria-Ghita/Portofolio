@@ -72,5 +72,3 @@ gsap.utils.toArray('.scroll-img').forEach((img) => {
         }
     );
 });
-
-
