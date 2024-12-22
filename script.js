@@ -1,3 +1,13 @@
+/*loading screen*/
+
+window.addEventListener('load', function () {
+
+  document.getElementById('loading').style.display = 'none';
+
+  document.getElementById('content').style.display = 'block';
+});
+
+/*title*/
 gsap.from(".titlu h1", {
     opacity: 0,
     y: -50,
@@ -11,6 +21,8 @@ gsap.from(".titlu h2", {
     duration: 1,
     delay: 1
 });
+
+/*arrow*/
 
 const titlu = document.getElementById("arrow-down");
 const initialPosition = { x: 0, y: 0 };
@@ -48,6 +60,8 @@ document.addEventListener("mousemove", (e) => {
     });
   }
 });
+
+/*projects*/
 
 gsap.registerPlugin(ScrollTrigger);
 

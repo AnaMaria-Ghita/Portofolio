@@ -16,6 +16,35 @@ body {
     position: relative;
 }
 
+/*loaging screen*/
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #e92c7b00;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.spinner {
+    border: 5px solid #f4b8b8;
+    border-top: 15px solid #db345b;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform:rotate(360deg); }
+}
+
 /*nav bar*/
 
 .nav {
