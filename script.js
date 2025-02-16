@@ -1,10 +1,27 @@
 /*loading screen*/
-
 window.addEventListener('load', function () {
 
   document.getElementById('loading').style.display = 'none';
 
-  document.getElementById('content').style.display = 'block';
+  document.getElementById('projects').style.display = 'block';
+});
+
+/*cursor*/
+const cursorEffect = document.querySelector('.cursor-effect');
+
+document.addEventListener('mousemove', (e) => {
+    const target = e.target;
+
+    cursorEffect.style.left = `${e.pageX - 75}px`;
+    cursorEffect.style.top = `${e.pageY - 75}px`;
+
+    if (target.tagName === "IMG") {
+        cursorEffect.style.opacity = "1";
+        cursorEffect.style.visibility = "visible";
+    } else {
+        cursorEffect.style.opacity = "0";
+        cursorEffect.style.visibility = "hidden";
+    }
 });
 
 /*title*/
@@ -93,6 +110,7 @@ const rightImage = document.querySelector('.me-photo');
 
   function overlapAnimation() {
     gsap.to(leftImage, {
+      opacity:0.5,
       x: '40%',
       duration: 1.5,
       ease: 'expo.in',
